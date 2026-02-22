@@ -1,1 +1,256 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everton Braatz Dalla Corte | Senior Full Stack Engineer</title>
+    <style>
+      :root {
+        --bg: #070511;
+        --bg-soft: #130d2a;
+        --card: rgba(22, 14, 49, 0.78);
+        --primary: #9a74ff;
+        --secondary: #5ee7df;
+        --text: #efecff;
+        --muted: #bbb2e6;
+        --border: rgba(154, 116, 255, 0.24);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 15% 20%, rgba(154, 116, 255, 0.3), transparent 40%),
+          radial-gradient(circle at 85% 0%, rgba(94, 231, 223, 0.22), transparent 32%),
+          radial-gradient(circle at 50% 100%, rgba(65, 43, 141, 0.3), transparent 45%),
+          var(--bg);
+        min-height: 100vh;
+        line-height: 1.6;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.35), transparent),
+          radial-gradient(1px 1px at 40% 70%, rgba(255, 255, 255, 0.4), transparent),
+          radial-gradient(2px 2px at 70% 35%, rgba(255, 255, 255, 0.22), transparent),
+          radial-gradient(1px 1px at 90% 65%, rgba(255, 255, 255, 0.4), transparent);
+        opacity: 0.7;
+      }
+
+      .container {
+        width: min(980px, 92%);
+        margin: 2rem auto 4rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, rgba(42, 28, 88, 0.85), rgba(17, 14, 37, 0.9));
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 2.4rem;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.9rem, 3.6vw, 3rem);
+        line-height: 1.1;
+        letter-spacing: 0.2px;
+      }
+
+      .subtitle {
+        margin-top: 0.65rem;
+        font-size: 1.02rem;
+        color: var(--secondary);
+        font-weight: 600;
+      }
+
+      section {
+        margin-top: 1.35rem;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 1.4rem 1.35rem;
+        backdrop-filter: blur(3px);
+      }
+
+      h2 {
+        margin: 0 0 0.8rem;
+        font-size: 1.08rem;
+        color: #d9cbff;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0.7rem 0;
+        color: var(--text);
+      }
+
+      .muted { color: var(--muted); }
+
+      ul {
+        margin: 0.4rem 0 0;
+        padding-left: 1.1rem;
+      }
+
+      li {
+        margin: 0.35rem 0;
+        color: var(--text);
+      }
+
+      .job {
+        margin-bottom: 1rem;
+      }
+
+      .job:last-child { margin-bottom: 0; }
+
+      .job-title {
+        font-weight: 700;
+        color: #f8f3ff;
+      }
+
+      .job-meta {
+        color: var(--secondary);
+        font-size: 0.95rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+
+      .chip-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+      }
+
+      .chip {
+        font-size: 0.88rem;
+        padding: 0.42rem 0.68rem;
+        border-radius: 999px;
+        border: 1px solid rgba(94, 231, 223, 0.45);
+        color: #dbfefd;
+        background: rgba(27, 69, 86, 0.22);
+      }
+
+      footer {
+        margin-top: 1.5rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>Everton Braatz Dalla Corte</h1>
+        <div class="subtitle">Senior Full Stack Software Engineer | Distributed Systems | SaaS Architect</div>
+        <p>
+          Senior Full Stack Software Engineer with nearly 10 years of experience designing,
+          building, and scaling web and mobile applications. Bachelor’s degree in Information
+          Systems with strong expertise in Laravel, React, Next.js, Vue.js, and React Native.
+        </p>
+      </header>
+
+      <section>
+        <h2>Professional Summary</h2>
+        <p>
+          Specialized in scalable SaaS platforms and high-demand distributed systems, including
+          microservices architecture, event-driven systems with Kafka, Redis performance tuning,
+          and relational database design with MySQL and PostgreSQL.
+        </p>
+        <p>
+          Combines backend architecture, frontend engineering, API design, and infrastructure
+          fundamentals to deliver reliable, maintainable, and production-ready software. Brings
+          senior engineering depth with co-founder experience, strong ownership, and
+          business-aligned architecture decisions.
+        </p>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+        <article class="job">
+          <div class="job-title">Full Stack Developer — Amplimed</div>
+          <p class="muted">
+            Built and maintained scalable, high-availability healthcare systems serving a large
+            user base.
+          </p>
+          <ul>
+            <li>Backend development with Laravel/PHP, API design, frontend delivery with React.</li>
+            <li>Contributed to microservices architecture for high-demand production workloads.</li>
+            <li>Implemented Redis caching strategies to improve response times and throughput.</li>
+            <li>Used Kafka for event-driven communication and asynchronous service workflows.</li>
+            <li>Optimized relational schemas, query performance, and system reliability under load.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-title">Co-Founder & Senior Full Stack Developer — D3T Softwares Personalizados</div>
+          <div class="job-meta">2019–2024</div>
+          <ul>
+            <li>Co-founded and scaled a custom software company focused on tailored SaaS platforms.</li>
+            <li>Led technical architecture, backend/frontend implementation, and deployments.</li>
+            <li>Delivered dashboards, internal management systems, and client portals.</li>
+            <li>Acted as technical lead: requirements, estimation, solution design, and client communication.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Technical Expertise</h2>
+        <div class="grid">
+          <div>
+            <p><strong>Backend:</strong> PHP, Laravel, Node.js</p>
+            <p><strong>Frontend:</strong> React, Next.js, Vue.js, JavaScript (ES6+), HTML5, CSS3</p>
+            <p><strong>Mobile:</strong> React Native</p>
+          </div>
+          <div>
+            <p><strong>Distributed Systems:</strong> Microservices, Kafka, event-driven architecture</p>
+            <p><strong>Performance:</strong> Redis caching, throughput optimization</p>
+            <p><strong>Databases:</strong> MySQL, PostgreSQL, relational modeling, query optimization</p>
+            <p><strong>Infrastructure:</strong> Linux basics, LAMP, deployment fundamentals</p>
+            <p><strong>Version Control:</strong> Git, GitHub</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Entrepreneurial & Product Experience</h2>
+        <p>
+          Experienced in turning product ideas into scalable MVPs and production-ready SaaS
+          systems. Skilled in schema design, complex entity relationship modeling, user flow
+          definition, and long-term maintainability planning.
+        </p>
+        <p>
+          Strong product mindset balancing technical excellence, user experience, performance,
+          and business impact.
+        </p>
+      </section>
+
+      <section>
+        <h2>Education & Additional Information</h2>
+        <p><strong>Education:</strong> Bachelor’s Degree in Information Systems</p>
+        <div class="chip-list">
+          <span class="chip">Based in Brazil</span>
+          <span class="chip">Open to fully remote international opportunities</span>
+          <span class="chip">Fluent in Portuguese</span>
+          <span class="chip">Proficient in English</span>
+        </div>
+      </section>
+
+      <footer>Crafted as a dark magical resume experience.</footer>
+    </main>
+  </body>
+</html>
