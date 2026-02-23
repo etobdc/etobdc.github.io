@@ -7,292 +7,71 @@
       name="description"
       content="Professional portfolio of Everton Braatz Dalla Corte, Senior Full Stack Software Engineer specialized in distributed systems and SaaS architecture."
     />
+    <meta property="og:title" content="Everton Braatz Dalla Corte | Senior Full Stack Engineer" />
+    <meta
+      property="og:description"
+      content="Professional portfolio of Everton Braatz Dalla Corte, Senior Full Stack Software Engineer specialized in distributed systems and SaaS architecture."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://github.com/etobdc.png" />
     <title>Everton Braatz Dalla Corte | Senior Full Stack Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --bg: #060714;
-        --bg-soft: #0e1328;
-        --surface: rgba(14, 21, 45, 0.68);
-        --surface-strong: rgba(8, 13, 30, 0.86);
-        --line: rgba(138, 168, 255, 0.24);
-        --line-soft: rgba(138, 168, 255, 0.12);
-        --primary: #9ac6ff;
-        --secondary: #71e3d3;
-        --accent: #8c7dff;
-        --text: #edf3ff;
-        --muted: #9fb0d8;
-        --shadow: 0 24px 70px rgba(5, 10, 28, 0.5);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        min-height: 100vh;
-        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(circle at 10% 20%, rgba(126, 172, 255, 0.16), transparent 34%),
-          radial-gradient(circle at 90% 10%, rgba(113, 227, 211, 0.16), transparent 32%),
-          radial-gradient(circle at 30% 90%, rgba(140, 125, 255, 0.14), transparent 30%),
-          linear-gradient(180deg, #04050d 0%, #070b1a 50%, #050715 100%);
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-
-      .noise-layer {
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        opacity: 0.13;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        z-index: 0;
-      }
-
-      .mesh {
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: 0;
-        background-image:
-          linear-gradient(transparent 95%, rgba(138, 168, 255, 0.08) 100%),
-          linear-gradient(90deg, transparent 95%, rgba(138, 168, 255, 0.06) 100%);
-        background-size: 60px 60px;
-        mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), transparent 80%);
-      }
-
-      .container {
-        width: min(1120px, 92vw);
-        margin: 2rem auto 3rem;
-        position: relative;
-        z-index: 1;
-      }
-
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        backdrop-filter: blur(10px);
-        border-radius: 22px;
-        box-shadow: var(--shadow);
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: 1.2fr 1fr;
-        gap: 2rem;
-        padding: clamp(1.2rem, 2.7vw, 2.2rem);
-      }
-
-      .hero h1 {
-        margin: 0;
-        font-size: clamp(2rem, 4vw, 3.6rem);
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-      }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.82rem;
-        color: var(--primary);
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 0.35rem 0.75rem;
-        margin-bottom: 0.9rem;
-        background: rgba(138, 168, 255, 0.08);
-      }
-
-      .hero p {
-        color: #d3e0ff;
-        margin: 1rem 0 0;
-        max-width: 65ch;
-      }
-
-      .hero-profile {
-        background: linear-gradient(165deg, rgba(12, 19, 42, 0.82), rgba(6, 11, 27, 0.88));
-        border: 1px solid var(--line-soft);
-        border-radius: 18px;
-        padding: 1rem;
-      }
-
-      .hero-profile img {
-        width: 100%;
-        max-width: 270px;
-        border-radius: 16px;
-        border: 1px solid var(--line);
-        display: block;
-        margin: 0 auto 0.8rem;
-      }
-
-      .meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-      }
-
-      .tag {
-        font-size: 0.78rem;
-        color: #dce9ff;
-        background: rgba(115, 160, 255, 0.14);
-        border: 1px solid var(--line-soft);
-        border-radius: 999px;
-        padding: 0.3rem 0.62rem;
-      }
-
-      .sections {
-        margin-top: 1.2rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .section {
-        padding: 1.2rem 1.2rem 1.1rem;
-      }
-
-      h2 {
-        margin: 0 0 0.75rem;
-        font-size: 0.95rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--secondary);
-      }
-
-      .timeline {
-        display: grid;
-        gap: 0.8rem;
-      }
-
-      .item {
-        background: var(--surface-strong);
-        border: 1px solid var(--line-soft);
-        border-radius: 14px;
-        padding: 0.9rem;
-      }
-
-      .item strong {
-        font-size: 1rem;
-      }
-
-      .item small {
-        display: block;
-        color: var(--primary);
-        margin-top: 0.2rem;
-      }
-
-      .item ul {
-        margin: 0.55rem 0 0;
-        padding-left: 1rem;
-        color: #d7e4ff;
-      }
-
-      .tech-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 0.7rem;
-      }
-
-      .tech-box {
-        background: linear-gradient(170deg, rgba(10, 15, 34, 0.8), rgba(8, 12, 27, 0.94));
-        border: 1px solid var(--line-soft);
-        border-radius: 14px;
-        padding: 0.85rem;
-      }
-
-      .tech-box p {
-        margin: 0;
-        color: #d4e3ff;
-      }
-
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        margin-top: 1rem;
-      }
-
-      .links a {
-        text-decoration: none;
-        color: #041022;
-        font-weight: 700;
-        font-size: 0.9rem;
-        background: linear-gradient(120deg, var(--secondary), #8dc9ff);
-        border-radius: 999px;
-        padding: 0.5rem 0.9rem;
-      }
-
-      .reveal {
-        opacity: 0;
-        transform: translateY(14px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
-      }
-
-      .reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @media (max-width: 900px) {
-        .hero {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-profile img {
-          max-width: 210px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="noise-layer"></div>
-    <div class="mesh"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
 
-    <main class="container">
-      <header class="hero card reveal">
-        <div>
-          <span class="badge">● Senior Full Stack Software Engineer</span>
-          <h1>Everton Braatz Dalla Corte</h1>
-          <p>
-            Senior Full Stack Software Engineer with nearly 10 years of experience building
-            scalable SaaS products and high-demand distributed systems. I work end-to-end
-            across architecture, backend, frontend, performance, and production reliability.
-          </p>
-          <div class="links">
-            <a href="https://github.com/etobdc" target="_blank" rel="noreferrer noopener">GitHub</a>
-            <a href="mailto:everton@example.com">Contact</a>
+    <div class="page-layout">
+      <nav class="section-nav" aria-label="Section navigation">
+        <div class="nav-title">Navigate</div>
+        <a href="#summary">Summary</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#product">Product</a>
+        <a href="#education">Education</a>
+        <a href="#additional">Additional</a>
+      </nav>
+
+      <main class="container">
+        <header class="hero card" id="top">
+          <div>
+            <span class="badge">Senior Full Stack Software Engineer</span>
+            <h1>Everton Braatz Dalla Corte</h1>
+            <p>
+              Senior Full Stack Software Engineer with nearly 10 years of experience building
+              scalable SaaS products and high-demand distributed systems. I work end-to-end
+              across architecture, backend, frontend, performance, and production reliability.
+            </p>
+            <div class="links">
+              <a href="https://github.com/etobdc" target="_blank" rel="noreferrer noopener">GitHub</a>
+              <a href="mailto:etodalla@gmail.com">Contact</a>
+              <a href="https://www.linkedin.com/in/evertondallacorte/" target="_blank" rel="noreferrer noopener">Linkedin</a>
+              <button type="button" class="print-btn" id="printBtn">Download PDF</button>
+            </div>
           </div>
-        </div>
 
-        <aside class="hero-profile">
-          <img
-            src="https://github.com/etobdc.png"
-            alt="Everton Braatz Dalla Corte GitHub profile photo"
-            loading="lazy"
-          />
-          <div class="meta">
-            <span class="tag">Based in Brazil</span>
-            <span class="tag">Open to fully remote international roles</span>
-            <span class="tag">Portuguese · English</span>
-          </div>
-        </aside>
-      </header>
+          <aside class="avatar-card">
+            <img
+              src="https://github.com/etobdc.png"
+              alt="Everton Braatz Dalla Corte GitHub profile photo"
+              loading="lazy"
+            />
+            <div class="meta">
+              <span class="tag">Based in Brazil</span>
+              <span class="tag">Open to fully remote international roles</span>
+              <span class="tag">Portuguese · English</span>
+            </div>
+          </aside>
+        </header>
 
-      <div class="sections">
-        <section class="section card reveal">
+        <section class="section card" id="summary">
           <h2>Professional Summary</h2>
           <p>
             Bachelor's degree in Information Systems with strong expertise in Laravel, React,
@@ -304,7 +83,7 @@
           </p>
         </section>
 
-        <section class="section card reveal">
+        <section class="section card" id="experience">
           <h2>Professional Experience</h2>
           <div class="timeline">
             <article class="item">
@@ -332,21 +111,21 @@
           </div>
         </section>
 
-        <section class="section card reveal">
+        <section class="section card" id="skills">
           <h2>Technical Expertise</h2>
-          <div class="tech-grid">
-            <div class="tech-box"><p><strong>Backend:</strong> PHP, Laravel, Node.js</p></div>
-            <div class="tech-box"><p><strong>Frontend:</strong> React, Next.js, Vue.js, JavaScript (ES6+), HTML5, CSS3</p></div>
-            <div class="tech-box"><p><strong>Mobile:</strong> React Native</p></div>
-            <div class="tech-box"><p><strong>Distributed Systems:</strong> Microservices, Kafka, event-driven systems</p></div>
-            <div class="tech-box"><p><strong>Performance:</strong> Redis caching strategies, throughput optimization</p></div>
-            <div class="tech-box"><p><strong>Databases:</strong> MySQL, PostgreSQL, relational modeling, query optimization</p></div>
-            <div class="tech-box"><p><strong>Infrastructure:</strong> Linux basics, LAMP setup, deployment fundamentals</p></div>
-            <div class="tech-box"><p><strong>Version Control:</strong> Git, GitHub</p></div>
+          <div class="chips">
+            <div class="chip"><p><strong>Backend:</strong> PHP, Laravel, Node.js</p></div>
+            <div class="chip"><p><strong>Frontend:</strong> React, Next.js, Vue.js, JavaScript (ES6+), HTML5, CSS3</p></div>
+            <div class="chip"><p><strong>Mobile:</strong> React Native</p></div>
+            <div class="chip"><p><strong>Distributed Systems:</strong> Microservices, Kafka, event-driven systems</p></div>
+            <div class="chip"><p><strong>Performance:</strong> Redis caching strategies, throughput optimization</p></div>
+            <div class="chip"><p><strong>Databases:</strong> MySQL, PostgreSQL, relational modeling, query optimization</p></div>
+            <div class="chip"><p><strong>Infrastructure:</strong> Linux basics, LAMP setup, deployment fundamentals</p></div>
+            <div class="chip"><p><strong>Version Control:</strong> Git, GitHub</p></div>
           </div>
         </section>
 
-        <section class="section card reveal">
+        <section class="section card" id="product">
           <h2>Entrepreneurial & Product Experience</h2>
           <p>
             Experienced in transforming product ideas into scalable MVPs and production-ready
@@ -357,32 +136,18 @@
           </p>
         </section>
 
-        <section class="section card reveal">
+        <section class="section card" id="education">
           <h2>Education</h2>
           <p>Bachelor's Degree in Information Systems</p>
         </section>
 
-        <section class="section card reveal">
+        <section class="section card" id="additional">
           <h2>Additional Information</h2>
           <p>Based in Brazil. Open to fully remote international opportunities. Fluent in Portuguese and proficient in English.</p>
         </section>
-      </div>
-    </main>
+      </main>
+    </div>
 
-    <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.18 }
-      );
-
-      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
